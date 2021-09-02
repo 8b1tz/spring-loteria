@@ -1,0 +1,23 @@
+<html>
+	<head th:replace="~{base :: head}"></head>
+	<body>	
+		<div th:replace="~{base :: logo}"></div>
+		
+		<div class="container">
+			<div th:replace="~{base :: titulo('Login ')}"></div>
+			<div class="card mb-3">
+			<form th:action="@{/login}" method="post" class="card-body">
+				<div class = "form-group">
+	            	<label for="username">Usuario</label>
+	            	<input  name="username" class = "form-control" placeholder="username"/>
+	           	</div>
+	           	<div class= "form-group"></div>
+	            	<label for="password">Senha</label>
+					 <input type="password" name="password" class = "form-control"  placeholder="password"/>
+				</div>
+	            <button class="btn btn-primary"type="submit" value="Sign In">Logar</button>
+        	</form>
+			</div>
+		</div>
+	</body>
+</html>
